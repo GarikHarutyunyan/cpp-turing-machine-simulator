@@ -5,7 +5,7 @@
 int main() {
     std::string input, output;
     std::string plusConfig = "Plus.txt";
-    //std::string isValidEmailConfig = "IsValidEmailConfig.txt";
+
     try {
         TuringMachine adder(plusConfig);
         input = "1111*11111"; 

@@ -123,12 +123,12 @@ std::string TuringMachine::run(std::string input, bool debugMode) {
                     break;
                 }
                 case 'X': {
-                    throw std::invalid_argument("Input value is not valid.");
+                    throw std::invalid_argument("Turing Machine Error");
                     break;
                 }
                 case '<': {
                     i--;
-                    // If machine move left from start position 
+                    // For moving left from start position 
                     if (i < 0) {
                         i = 0;
                         input.insert(0, " ");
