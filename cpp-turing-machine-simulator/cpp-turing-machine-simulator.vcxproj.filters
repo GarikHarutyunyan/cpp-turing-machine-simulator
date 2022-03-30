@@ -21,14 +21,26 @@
     <ClCompile Include="TuringMachine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TuringMachine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Plus.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Multiplication.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Division.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

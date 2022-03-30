@@ -141,11 +141,15 @@
   <ItemGroup>
     <ClCompile Include="cpp-turing-machine-simulator.cpp" />
     <ClCompile Include="TuringMachine.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TuringMachine.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Division.txt" />
+    <Text Include="Multiplication.txt" />
     <Text Include="Plus.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

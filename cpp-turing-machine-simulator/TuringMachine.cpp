@@ -94,12 +94,6 @@ std::string TuringMachine::run(std::string input, bool debugMode) {
 
     while (isRunning) {
         std::string inputSymbol(1, input[i]);
-        
-        //Debugging
-        if (debugMode) {
-            std::cout << input << "     " <<this->activeState<< std::endl;
-            std::cout << std::string(i, ' ') <<'^'<< std::string(input.length()-i, ' ')<<std::endl;
-        }
 
         // Check if Input alphabet includes the current character
         if (this->inputAlphabet.find(input[i]) < this->inputAlphabet.length()) {
@@ -140,6 +134,12 @@ std::string TuringMachine::run(std::string input, bool debugMode) {
                 }
             }
             this->activeState = nextState;
+
+            //Debugging
+            if (debugMode) {
+                std::cout << input << "     " << this->activeState << std::endl;
+                std::cout << std::string(i, ' ') << '^' << std::string(input.length() - i, ' ') << std::endl;
+            }
         }
         else {
             throw std::invalid_argument("Input Alphabet does not include the current character: " + inputSymbol);
