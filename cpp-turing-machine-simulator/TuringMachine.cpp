@@ -100,11 +100,6 @@ std::string TuringMachine::run(std::string input, bool debugMode) {
             std::cout << input << "     " <<this->activeState<< std::endl;
             std::cout << std::string(i, ' ') <<'^'<< std::string(input.length()-i, ' ')<<std::endl;
         }
-        
-        // For understanding out of range values as empty char 
-        if (input[i] == '\0') {
-            input[i] = ' ';
-        }
 
         // Check if Input alphabet includes the current character
         if (this->inputAlphabet.find(input[i]) < this->inputAlphabet.length()) {
@@ -137,6 +132,10 @@ std::string TuringMachine::run(std::string input, bool debugMode) {
                 }
                 case '>': {
                     i++;
+                    // For moving right from last symbol
+                    if (i >= input.length()) {
+                        input.insert(input.length(), " ");
+                    }
                     break;
                 }
             }
