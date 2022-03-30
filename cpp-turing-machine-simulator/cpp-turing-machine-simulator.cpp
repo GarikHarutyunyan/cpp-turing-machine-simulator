@@ -48,6 +48,7 @@ int main() {
     }
     catch (std::invalid_argument& err) {
         std::cerr << err.what() << std::endl;
+        return 1;
     }
 
     return 0;
